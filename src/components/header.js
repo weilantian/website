@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "gatsby";
 
+
 const Header = () => {
     return <nav className="px-14 py-8 flex justify-between">
         <Link className="text-lg " to='/'>Eric Lantian Wei</Link>
@@ -9,8 +10,10 @@ const Header = () => {
             <NavItem to="/projects" title="Projects"/>
             <NavItem to="/articles" title="About"/>
         </ul>
+
     </nav>
 }
+
 
 const NavItem = ({title, to}) => {
     return <li><Link to={to} activeClassName="text-black"

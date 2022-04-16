@@ -6,4 +6,9 @@ summary: lala I losted you
 category: other
 type: article
 ---
+
+import Chart from "@components/chart"
+
 This is a really cool blog post
+
+<Chart/>
