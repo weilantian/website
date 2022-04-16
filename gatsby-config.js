@@ -20,6 +20,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-remark-images`,
         `gatsby-plugin-netlify-cms`,
+        `gatsby-plugin-netlify`,
         {
             resolve: 'gatsby-plugin-mdx',
             options: {
