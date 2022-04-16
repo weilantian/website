@@ -5,6 +5,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           frontmatter {
             path
+            type
+         
           }
         }
       }
@@ -17,14 +19,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const pages = result.data.allMdx.nodes;
 
-  pages.forEach((page) => {
-    actions.createPage({
-      path: page.frontmatter.path,
-      component: require.resolve("./src/templates/post.js"),
-      context: {
-        pathSlug: page.frontmatter.path,
-      
-      },
+
+    pages.forEach((page) => {
+        const templetePaths = [{
+            type: "article",
+            path: "./src/templates/post.js"
+        }]
+
+        actions.createPage({
+            path: page.frontmatter.path,
+            component: require.resolve(templetePaths.find(item => item.type === page.frontmatter.type).path),
+            context: {
+                pathSlug: page.frontmatter.path,
+            },
+        });
+
+
     });
-  });
 };
