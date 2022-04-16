@@ -19,6 +19,7 @@ module.exports = {
         `gatsby-plugin-mantine`,
         `gatsby-plugin-react-helmet`,
         `gatsby-remark-images`,
+        `gatsby-plugin-netlify-cms`,
         {
             resolve: 'gatsby-plugin-mdx',
             options: {
