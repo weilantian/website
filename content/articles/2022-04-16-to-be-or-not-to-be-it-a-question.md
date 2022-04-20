@@ -8,8 +8,6 @@ type: article
 thumbnail: ../images/cool.jpg
 ---
 
-import Chart from "@components/chart"
-
 This is a really cool blog post
 
-<Chart/>
+<Chart></Chart>
