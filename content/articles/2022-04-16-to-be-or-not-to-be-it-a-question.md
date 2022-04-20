@@ -8,6 +8,14 @@ type: article
 thumbnail: ../images/cool.jpg
 ---
 
+# How this all begins
+
+## 123
+
+You should consider using `sabbc` rather then `babbc`
+
+iMean helps you to get things done easier.
+
 This is a really cool blog post
 
 <Chart></Chart>

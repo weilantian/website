@@ -13,11 +13,29 @@ const Page = ({ data: { mdx: post } }) => {
   const { body } = post;
   return (
     <Layout>
-      <MDXProvider components={shortcodes}>
-        <h1>{title}</h1>
-        <Button>Cool btn</Button>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
+      <div className=" mt-12 container px-12 mx-auto grid grid-cols-12">
+        <div className=" col-span-9">
+          <MDXProvider components={shortcodes}>
+            <h1>{title}</h1>
+            <Button>Cool btn</Button>
+            <article className=" prose prose-slate">
+              <MDXRenderer>{body}</MDXRenderer>
+            </article>
+          </MDXProvider>
+        </div>
+        <div className=" col-span-3">
+          <h2>Table of contents</h2>
+          <ul>
+            {post.tableOfContents.items.map((item) => (
+              <li key={item.url}>
+                <a className=" text-gray-500" href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -32,6 +50,7 @@ export const query = graphql`
         path
       }
       body
+      tableOfContents
     }
   }
 `;
