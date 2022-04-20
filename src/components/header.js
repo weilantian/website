@@ -3,8 +3,8 @@ import {Link} from "gatsby";
 
 
 const Header = () => {
-    return <nav className="px-14 py-8 flex justify-between">
-        <Link className="text-lg " to='/'>Eric Lantian Wei</Link>
+    return <nav className="px-12 container py-8 flex justify-between mx-auto">
+        <Link className="text-lg font-medium " to='/'>Eric Lantian Wei</Link>
         <ul className="flex space-x-8">
             <NavItem to="/articles" title="Articles"/>
             <NavItem to="/projects" title="Projects"/>

@@ -9,7 +9,7 @@ const Layout = ({title, children}) => {
             <meta charSet="utf-8"/>
             <title>{title || "Eric Lantian Wei"}</title>
         </Helmet>
-        <div className="px-14">{children}</div>
+        <div>{children}</div>
 
     </div>
 }
